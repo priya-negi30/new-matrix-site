@@ -3,6 +3,7 @@ import { FaGoogle, FaFacebookF, FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import loginBanner from "/assets/login-banner.webp";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -17,7 +18,7 @@ const SignIn = () => {
           {/* Left Illustration */}
           <div className="hidden lg:flex items-center justify-center bg-blue-50 p-10">
             <img
-              src="./assets/login-banner.webp"
+              src={loginBanner}
               alt="Signin"
               className="max-w-full h-auto"
             />

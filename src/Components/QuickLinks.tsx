@@ -47,14 +47,14 @@ const QuickLinks: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 sm:-mt-36 -mt-10  relative z-10">
+    <section className="pt-16 sm:-mt-36 -mt-10  relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="md:hidden text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight text-center mb-6"
+          className="md:hidden text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight text-center"
         >
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600">Quick Links</span>
+          {/* <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600">Quick Links</span> */}
         </motion.div>
 
         <motion.div
@@ -62,9 +62,9 @@ const QuickLinks: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
-          className="bg-white rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] p-10 border border-gray-100"
+          className="bg-white rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] p-6 border border-gray-100"
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {links.map((link, index) => (
               <motion.a
                 key={index}
