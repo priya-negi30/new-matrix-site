@@ -7,6 +7,7 @@ import { Pagination, Autoplay, EffectFade, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import testimonialBg from "/assets/testimonial-bg.jpg";
 
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
@@ -17,32 +18,32 @@ const TestimonialsSection: React.FC = () => {
   ];
 
   const stats = [
-    { count: '500+', label: 'Doctors Available' },
-    { count: '18+', label: 'Specialities' },
-    { count: '30K', label: 'Bookings Done' },
-    { count: '97+', label: 'Hospitals & Clinic' },
-    { count: '317+', label: 'Lab Tests' },
+    { count: '1Lakh+', label: 'Cataract Surgeries' },
+    { count: '500+', label: 'LASIK Procedures' },
+    { count: '500+', label: 'IVF Success Stories' },
+    { count: '25K+', label: 'Safe Deliveries' },
+    { count: '2.3K+', label: 'Health Camps' },
   ];
 
   return (
-    <section className="py-24 bg-linear-to-b from-white to-blue-50/50 overflow-hidden">
+    <section className="py-18 bg-cover bg-no-repeat overflow-hidden" style={{ backgroundImage: `url(${testimonialBg})` }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 mb-4 text-sm font-bold tracking-wider text-blue-50 uppercase bg-blue-600 rounded-full"
+            className="inline-block text-white bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-2 rounded-full font-bold tracking-wider uppercase text-xs mb-4 shadow-lg shadow-blue-200"
           >
             Testimonials
           </motion.span>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight"
+            className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight"
           >
-            15k Users <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600">Trust Doccure</span>
+            15k Users <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600">Trust SBH</span>
           </motion.h2>
         </div>
 
@@ -77,7 +78,7 @@ const TestimonialsSection: React.FC = () => {
             >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index} className="h-full">
-                <div className="bg-white border border-gray-100 p-8 rounded-3xl shadow-xl shadow-blue-900/5 flex flex-col h-full hover:border-blue-200 transition-colors duration-300">
+                <div className="bg-white border border-gray-100 p-8 rounded-[0.5rem] shadow-xl shadow-blue-900/5 flex flex-col h-full hover:border-blue-200 transition-colors duration-300">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (

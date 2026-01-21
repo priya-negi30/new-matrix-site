@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaPaperPlane, FaTwitter } from "react-icons/fa";
+import footerBg from "/assets/10515406.png";
 
 // Footer Component
 const Footer: React.FC = () => {
@@ -6,8 +7,8 @@ const Footer: React.FC = () => {
     <footer className="bg-white text-gray-600 py-16 border-t border-gray-200 relative">
 
       <div className="absolute inset-0">
-        <img 
-        src="./assets/10515406.png"
+        <img
+        src={footerBg}
         className="w-full h-full object-fill opacity-25"
         />
       </div>

@@ -1,15 +1,23 @@
 import { type Variants, motion } from "motion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import { 
-  PiHeartbeatDuotone, PiBoneDuotone, PiBrainDuotone, 
+import {
+  PiHeartbeatDuotone, PiBoneDuotone, PiBrainDuotone,
   PiBabyDuotone, PiHandsPrayingDuotone, PiFirstAidKitDuotone,
-  PiCaretLeftBold, PiCaretRightBold 
+  PiCaretLeftBold, PiCaretRightBold
 } from "react-icons/pi";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
+import eyecareImg from "/assets/service/eyecare.png";
+import maternityCareImg from "/assets/service/maternitycare.jpg";
+import pediatricCareImg from "/assets/service/pediatriccare.jpg";
+import diagnosticServiceImg from "/assets/service/diagnosticservice.jpg";
+import criticalCareImg from "/assets/service/criticalcare.jpg";
+import surgicalExcellenceImg from "/assets/service/surgicalexcellence.jpg";
+import generalMedicineImg from "/assets/service/generalmedicine.jpg";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -22,58 +30,67 @@ const fadeInUp: Variants = {
 
 const SpecialtiesSection: React.FC = () => {
   const specialties = [
-    { 
-        name: 'Cardiology', 
-        doctors: 254, 
-        color: 'text-red-600', 
-        bg: 'bg-red-50', 
+    {
+        name: 'Ophthalmic Care',
+        doctors: 254,
+        color: 'text-red-600',
+        bg: 'bg-red-50',
         icon: <PiHeartbeatDuotone size={48} />,
-        image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&q=80&w=800" 
+        image: eyecareImg
     },
-    { 
-        name: 'Orthopedics', 
-        doctors: 151, 
-        color: 'text-blue-600', 
-        bg: 'bg-blue-50', 
+    {
+        name: 'Maternity Care',
+        doctors: 151,
+        color: 'text-blue-600',
+        bg: 'bg-blue-50',
         icon: <PiBoneDuotone size={48} />,
-        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+        image: maternityCareImg
     },
-    { 
-        name: 'Neurology', 
-        doctors: 176, 
-        color: 'text-purple-600', 
-        bg: 'bg-purple-50', 
-        icon: <PiBrainDuotone size={48} />,
-        image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=800"
-    },
-    { 
-        name: 'Pediatrics', 
-        doctors: 124, 
-        color: 'text-pink-600', 
-        bg: 'bg-pink-50', 
+    {
+        name: 'Pediatric Care',
+        doctors: 124,
+        color: 'text-pink-600',
+        bg: 'bg-pink-50',
         icon: <PiBabyDuotone size={48} />,
-        image: "https://images.unsplash.com/photo-1581594632702-f20137f09344?auto=format&fit=crop&q=80&w=800"
+        image: pediatricCareImg
     },
-    { 
-        name: 'Psychiatry', 
-        doctors: 112, 
-        color: 'text-indigo-600', 
-        bg: 'bg-indigo-50', 
-        icon: <PiHandsPrayingDuotone size={48} />,
-        image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800"
-    },
-    { 
-        name: 'General Care', 
-        doctors: 104, 
-        color: 'text-emerald-600', 
-        bg: 'bg-emerald-50', 
+    {
+        name: 'Diagnostic Service',
+        doctors: 104,
+        color: 'text-emerald-600',
+        bg: 'bg-emerald-50',
         icon: <PiFirstAidKitDuotone size={48} />,
-        image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&q=80&w=800"
+        image: diagnosticServiceImg
     },
+    {
+        name: 'Critical Care',
+        doctors: 112,
+        color: 'text-indigo-600',
+        bg: 'bg-indigo-50',
+        icon: <PiHandsPrayingDuotone size={48} />,
+        image: criticalCareImg
+    },
+    {
+        name: 'Surgical Excellence',
+        doctors: 104,
+        color: 'text-emerald-600',
+        bg: 'bg-emerald-50',
+        icon: <PiFirstAidKitDuotone size={48} />,
+        image: surgicalExcellenceImg
+    },
+    {
+        name: 'General Medicine',
+        doctors: 104,
+        color: 'text-emerald-600',
+        bg: 'bg-emerald-50',
+        icon: <PiFirstAidKitDuotone size={48} />,
+        image: generalMedicineImg
+    },
+
   ];
 
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden">
+    <section className="py-18 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Fixed & Centered Header */}
@@ -82,13 +99,13 @@ const SpecialtiesSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
-          <span className="inline-block text-white bg-blue-600 px-6 py-2 rounded-full font-bold tracking-wider uppercase text-xs mb-4 shadow-lg shadow-blue-200">
+          <span className="inline-block text-white bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-2 rounded-full font-bold tracking-wider uppercase text-xs mb-4 shadow-lg shadow-blue-200">
             Top Specialties
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-            Specialized <span className="text-blue-600">Care</span> <br className="hidden md:block" /> For Your Family
+          <h2 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight font-hanken">
+            Highlighting the  <span className="text-blue-600">Care & Support</span>
           </h2>
         </motion.div>
 
@@ -128,7 +145,7 @@ const SpecialtiesSection: React.FC = () => {
           >
             {specialties.map((item, index) => (
               <SwiperSlide key={index} className="h-full">
-                <div className="group relative h-96 rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-gray-900">
+                <div className="group relative h-60 rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2  bg-gray-700">
                   
                   {/* Background Image with Overlay */}
                   <div className="absolute inset-0 z-0">
@@ -143,7 +160,7 @@ const SpecialtiesSection: React.FC = () => {
                   {/* Card Content */}
                   <div className="relative z-10 p-8 h-full flex flex-col justify-end">
                     <motion.div 
-                      className={`w-16 h-16 ${item.bg} ${item.color} rounded-2xl flex items-center justify-center mb-6 hover:scale-110 transition-all duration-500`}
+                      className={`w-12 h-12 ${item.bg} ${item.color} rounded-2xl flex items-center justify-center mb-6 hover:scale-110 transition-all duration-500`}
                     >
                       {item.icon}
                     </motion.div>
@@ -152,10 +169,10 @@ const SpecialtiesSection: React.FC = () => {
                       <h3 className="text-2xl font-bold text-white mb-2">{item.name}</h3>
                       <p className="text-gray-300 font-medium mb-6">{item.doctors}+ Professional Doctors</p>
                       
-                      <button className="flex items-center text-sm font-bold text-blue-400 hover:text-blue-300 transition-all">
+                      {/* <button className="flex items-center text-sm font-bold text-blue-400 hover:text-blue-300 transition-all">
                         EXPLORE MORE 
                         <span className="ml-2 hover:ml-4 transition-all text-xl">→</span>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>

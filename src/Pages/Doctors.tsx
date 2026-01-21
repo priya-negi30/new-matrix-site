@@ -10,15 +10,12 @@ const Doctors = () => {
   return (
     <>
     <Header/>
-    <section
-    className="relative min-h-screen pt-18 pb-20 overflow-hidden"
-    >
+
       <Breadcrumbs 
       items={[
         { label: "Doctor"}
       ]}
       />
-    </section>
     <Footer/>
     </>
   )
