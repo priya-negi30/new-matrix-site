@@ -20,6 +20,7 @@ import HB from "./Pages/HbMeter"
 import PCOT from "./Pages/Poct"
 import Microscope from "./Pages/Microscopes"
 import Centrifuges from "./Pages/Centrifuges"
+import TermCondition from "./Pages/TermsCondition"
 import { Contact } from "lucide-react"
 
 const App = () => {
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/poct" element={<PCOT/>} />
         <Route path="/microscopes" element={<Microscope/>} />
         <Route path="/centrifuges" element={<Centrifuges/>} />
+        <Route path="/term-condition" element={<TermCondition/>} />
       </Routes>
     </BrowserRouter>
     </>
